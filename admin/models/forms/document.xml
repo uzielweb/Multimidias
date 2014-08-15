@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_multimidias/models/rules"
+	addfieldpath="/administrator/components/com_multimidias/models/fields"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="date_created"
+			type="hidden"
+		/>
+		<field
+			name="user_created"
+			type="hidden"
+		/>
+		<field
+			class="inputbox validate-title"
+			default=""
+			description=""
+			label="Title"
+			name="title"
+			required="true"
+			size="40"
+			type="text"
+			validate="title"
+		/>
+		<field
+			class="inputbox description"
+			default=""
+			description=""
+			label="Description"
+			name="description"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox authorcopyright"
+			default=""
+			description=""
+			label="Author / Copyright"
+			name="authorcopyright"
+			size="40"
+			type="text"
+		/>
+		<field
+			default=""
+			description=""
+			label="File"
+			name="file"
+			type="file"
+		/>
+		<field
+			class="inputbox link"
+			default=""
+			description=""
+			label="Link"
+			name="link"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox validate-category"
+			default=""
+			description=""
+			label="Category"
+			name="category"
+			required="true"
+			size="40"
+			type="text"
+			validate="category"
+		/>
+	</fieldset>
+</form>

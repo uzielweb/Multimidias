@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_MULTIMIDIAS</name>
+	<creationDate>September 16, 2013</creationDate>
+	<author>Ponto Mega</author>
+	<authorEmail>contato@pontomega.com.br</authorEmail>
+	<authorUrl>pontomega.com.br</authorUrl>
+	<copyright>Copyright (C) 2013. All Rights Reserved</copyright>
+	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<h1>multimidias (v.1.0.0)</h1>
+		<div style="clear: both;"></div>
+		<p>Component for Photos, Videos, Docs, Files and Audio. <strong>Built for Joomla 3.0.</strong></p>
+		<p>Created by <a href="http://pontomega.com.br" target="_blank">Ponto Mega | pontomega.com.br</a>
+	]]></description>
+
+	<!-- Runs on install; New in Joomla 1.5 -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall; New in Joomla 1.5 -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Update Schema; New in Joomla 2.5 -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>multimidias.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu img="components/com_multimidias/assets/images/icons/media_48-16x16.png">COM_MULTIMIDIAS_MENU</menu>
+		<submenu>
+			<!-- Instead of link you can specify individual link attributes -->
+			<menu option="com_multimidias" view="multimidias" img="components/com_multimidias/assets/images/icons/media_48-16x16.png">COM_MULTIMIDIAS_MENU_MULTIMIDIAS</menu>
+			<menu option="com_multimidias" view="musics">COM_MULTIMIDIAS_MENU_MUSICS</menu>
+			<menu option="com_multimidias" view="videos">COM_MULTIMIDIAS_MENU_VIDEOS</menu>
+			<menu option="com_multimidias" view="photos">COM_MULTIMIDIAS_MENU_PHOTOS</menu>
+			<menu option="com_multimidias" view="documents">COM_MULTIMIDIAS_MENU_DOCUMENTS</menu>
+			<menu link="option=com_categories&amp;extension=com_multimidias">COM_MULTIMIDIAS_MENU_MENU_CATEGORIES</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>multimidias.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_multimidias.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_multimidias.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>
